@@ -32,10 +32,7 @@ export default function App() {
   /* With the saveAs function, the image will download and the name will be according to the
   strings the user has written in the input */
   const downloadImage = () => {
-    saveAs(
-      `https://api.memegen.link/images/${meme}`,
-      `${meme}/${topText}/${bottomText}`,
-    );
+    saveAs(`https://api.memegen.link/images/${meme}`, 'meme');
   };
 
   return (
