@@ -21,7 +21,7 @@ export default function App() {
     } else if (bottomText) {
       /* Third if checks if the bottomText variable is truthy, and if so, it returns the
     URL with the meme and bottomText variables */
-      return `https://api.memegen.link/images/${meme}/${bottomText}.jpg`;
+      return `https://api.memegen.link/images/${meme}/_/${bottomText}.jpg`;
     } else {
       /* Finally, the else is reached if neither topText nor bottomText is truthy, and
     it returns the URL with only the meme variable */
