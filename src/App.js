@@ -12,6 +12,7 @@ export default function App() {
   const url = () => {
     /* First if checks if both variables are truthy, and if so, it returns the URL with
     all three variables */
+
     if (topText && bottomText) {
       return `https://api.memegen.link/images/${meme}/${topText}/${bottomText}.jpg`;
     } else if (topText) {
@@ -32,7 +33,7 @@ export default function App() {
   /* With the saveAs function, the image will download and the name will be according to the
   strings the user has written in the input */
   const downloadImage = () => {
-    saveAs(`https://api.memegen.link/images/${meme}`, 'meme');
+    saveAs(url(), `${topText}-${bottomText}-${meme}`);
   };
 
   return (
